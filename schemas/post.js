@@ -55,6 +55,11 @@ export default defineType({
       type: 'reference',
       weak: true,
       to: [{type: 'post'}],
+    }),
+    defineField({
+      name: 'haloNumber',
+      title: 'Halo Number',
+      type: 'number'
     })
   ],
 
