@@ -50,11 +50,11 @@ export default defineType({
       of: [{type: 'reference', weak: true, to: {type: 'post'}}],
     }),
     defineField({
-      name: 'parentPost',
-      title: 'Parent Post',
+      name: 'parentPosts',
+      title: 'Parent Posts',
       type: 'reference',
-      weak: true,
-      to: [{type: 'post'}],
+      type: 'array',
+      of: [{type: 'reference', weak: true, to: {type: 'post'}}],
     }),
     defineField({
       name: 'haloNumber',
