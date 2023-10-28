@@ -43,6 +43,19 @@ export default defineType({
       title: 'Body',
       type: 'blockContent',
     }),
+    defineField({
+      name: 'childPosts',
+      title: 'Child Posts',
+      type: 'array',
+      of: [{type: 'reference', weak: true, to: {type: 'post'}}],
+    }),
+    defineField({
+      name: 'parentPost',
+      title: 'Parent Post',
+      type: 'reference',
+      weak: true,
+      to: [{type: 'post'}],
+    })
   ],
 
   preview: {
